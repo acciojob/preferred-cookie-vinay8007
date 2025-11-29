@@ -33,8 +33,5 @@ document.getElementById("settingsForm").addEventListener("submit", function(even
     document.cookie = "fontsize" + size + "; path=/";
     document.cookie = "fontcolor" + size + "; path=/";
 
-    document.documentElement.style.setProperty("--fontsize", size + "px");
-    document.documentElement.style.setProperty("--fontcolor", color);
-
     alert("preferences saved!");
 });
