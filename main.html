@@ -1,29 +1,27 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Font with Cookies</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Customize Font Style</h2>
+    <form id="settingsForm">
+        <label for="fontsize">Font Size (8-72px):</label>
+        <input type="number" id="fontsize" min="8" max="72" value="16">
 
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+        <label for="fontcolor">Font Color:</label>
+        <input type="color" id="fontcolor" value="#000000">
 
-  <body>
-    <!-- the entire body must be written by student -->
-    <form>
-      <label for="fontsize">Font Size:</label>
-      <input
-        type="number"
-        id="fontsize"
-        name="fontsize"
-        min="8"
-        max="72"
-        value="16"
-      />
-      <br />
-      <label for="fontcolor">Font Color:</label>
-      <input type="color" id="fontcolor" name="fontcolor" value="#000000" />
-      <br />
-      <input type="submit" value="Save" />
+        <input type="submit" value="save">
     </form>
 
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+    <p>this is a practice text. Change the settings, click save, refresh the page, and your font preferences will be remembered!</p>
+
+
+    <script src="script.js"></script>
+</body>
 </html>
