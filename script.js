@@ -1,6 +1,6 @@
-function getCoockie(name){
+function getCookie(name){
     let decoded = decodeURIComponent(document.cookie);
-    let parts = decoded.split(", ");
+    let parts = decoded.split("; ");
     for(let part of parts){
         let [key, value] = part.split("=");
         if (key === name) return value;
@@ -9,8 +9,8 @@ function getCoockie(name){
 }
 
 window.onload = function(){
-    let savedSize = getCoockie("fontSize");
-    let savedColor = getCoockie("fontColor");
+    let savedSize = getCookie("fontsize");
+    let savedColor = getCookie("fontcolor");
 
     if(savedSize){
         document.documentElement.style.setProperty("--fontsize", savedSize + "px");
@@ -19,8 +19,8 @@ window.onload = function(){
 
     
     if(savedColor){
-        document.documentElement.style.setProperty("--fontsize", savedColor);
-        document.getElementById("fontsize").value = savedColor;
+        document.documentElement.style.setProperty("--fontcolor", savedColor);
+        document.getElementById("fontcolor").value = savedColor;
     }
 };
 
